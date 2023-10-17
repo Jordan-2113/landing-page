@@ -986,7 +986,7 @@ html::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: 150% 110%;
     background-position: right top;
-    filter: blur(50px);
+    /* filter: blur(50px); */
 }
 
 .two-content-title {
@@ -1144,6 +1144,7 @@ html::-webkit-scrollbar {
 
 .two-content-text>div div {
     opacity: 0;
+    line-height: 20px;
 }
 
 .two-content-text>div:nth-of-type(2) svg line {
@@ -1383,10 +1384,10 @@ html::-webkit-scrollbar {
 }
 
 .three-content-img {
-    background-image: url("./image/Body01.jpg");
+    /* background-image: url("./image/Body01.jpg"); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: blur(50px);
+    /* filter: blur(50px); */
 }
 
 .three-content-text {
@@ -1405,7 +1406,7 @@ html::-webkit-scrollbar {
 .three-content-text>div {
     text-align: center;
     position: absolute;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
     width: 300px;
 }
@@ -1434,7 +1435,7 @@ html::-webkit-scrollbar {
 .three-content-text svg path {
     stroke-dasharray: 2170;
     stroke-dashoffset: 2170;
-    animation: animatepath1 10s;
+    animation: animatepath1 10s forwards;
 }
 
 @keyframes animatepath1 {
@@ -1447,7 +1448,7 @@ html::-webkit-scrollbar {
     }
 
     100% {
-        stroke-dashoffset: -2170;
+        stroke-dashoffset: 0;
     }
 }
 
@@ -1480,10 +1481,10 @@ html::-webkit-scrollbar {
 }
 
 .four-content-img {
-    background-image: url("./image/Body03.jpg");
+    /* background-image: url("./image/Body03.jpg"); */
     background-repeat: no-repeat;
     background-size: 100%;
-    filter: blur(50px);
+    /* filter: blur(50px); */
 }
 
 .four-content-text {
@@ -1493,7 +1494,7 @@ html::-webkit-scrollbar {
 .four-content-text>div {
     text-align: center;
     position: absolute;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
     width: 300px;
 }
@@ -1531,7 +1532,7 @@ html::-webkit-scrollbar {
 .four-content-text svg path {
     stroke-dasharray: 2200;
     stroke-dashoffset: -2200;
-    animation: animatepath2 10s;
+    animation: animatepath2 10s forwards;
 }
 
 @keyframes animatepath2 {
@@ -1544,7 +1545,7 @@ html::-webkit-scrollbar {
     }
 
     100% {
-        stroke-dashoffset: 2200;
+        stroke-dashoffset: 0;
     }
 }
 
@@ -1579,10 +1580,10 @@ html::-webkit-scrollbar {
 }
 
 .five-content-img {
-    background-image: url("./image/BeautyGirl09.jpg");
+    /* background-image: url("./image/BeautyGirl09.jpg"); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: blur(50px);
+    /* filter: blur(50px); */
 }
 
 .five-content-text {
@@ -1591,7 +1592,7 @@ html::-webkit-scrollbar {
 
 .five-content-text>div {
     position: absolute;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
 }
 
@@ -2837,6 +2838,10 @@ html::-webkit-scrollbar {
     margin-top: 20px;
     font-size: 32px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     margin-bottom: 50px;
     cursor: pointer;
 }
@@ -2856,9 +2861,6 @@ html::-webkit-scrollbar {
 }
 
 .trials-content-main-title>svg {
-    position: absolute;
-    top: -17px;
-    left: 300px;
     width: 160px;
     height: 60px;
     stroke: black;
@@ -2916,7 +2918,7 @@ html::-webkit-scrollbar {
 @media (max-width:800px) {
     .trials-content {
         overflow-x: hidden;
-        padding-right: 10px;
+        padding: 0 10px 0 0;
     }
 
     .trials-content-main {
@@ -2932,11 +2934,15 @@ html::-webkit-scrollbar {
     }
 
     .trials-content-main-title>svg {
-        width: 100px;
-        height: 40px;
+        width: 12rem;
+        height: 6rem;
         stroke: white;
         top: -5px;
         left: 200px;
+    }
+
+    .trials-content-main-lists>div {
+        margin-top: 0;
     }
 
     .trials-content-main-lists>div:hover {

@@ -44,22 +44,22 @@ window.addEventListener('scroll', ()=>{
   if(twotop < 300 && threetop > 300){
     document.getElementById('twocontentText').style.display = "block";
   } else {
-    document.getElementById('twocontentText').removeAttribute('style');
+    // document.getElementById('twocontentText').removeAttribute('style');
   }
   if(threetop < 300 && fourtop > 300){
     document.getElementById('threecontentText').style.display = "block";
   } else {
-    document.getElementById('threecontentText').removeAttribute('style');
+    // document.getElementById('threecontentText').removeAttribute('style');
   }
   if(fourtop < 300 && fivetop > 300){
     document.getElementById('fourcontentText').style.display = "block";
   } else {
-    document.getElementById('fourcontentText').removeAttribute('style');
+    // document.getElementById('fourcontentText').removeAttribute('style');
   }
   if(fivetop < 300 && sixtop > 300){
     document.getElementById('fivecontentText').style.display = "block";
   } else {
-    document.getElementById('fivecontentText').removeAttribute('style');
+    // document.getElementById('fivecontentText').removeAttribute('style');
   }
 
 
