@@ -982,7 +982,7 @@ html::-webkit-scrollbar {
 }
 
 .two-content-img {
-    background-image: url("./image/BeautyGirl02.jpg");
+    /* background-image: url("./image/BeautyGirl02.jpg"); */
     background-repeat: no-repeat;
     background-size: 150% 110%;
     background-position: right top;
@@ -1780,6 +1780,9 @@ html::-webkit-scrollbar {
 .six-content {
     padding-top: 150px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .six-content h3 {
@@ -1790,8 +1793,8 @@ html::-webkit-scrollbar {
 
 .six-content p {
     font-size: 28px;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    width: 1000px;
+    max-width: 100%;
     margin: 0px;
 }
 
@@ -1799,9 +1802,9 @@ html::-webkit-scrollbar {
     margin-top: 50px;
     text-align: center;
     width: 100%;
-    font-size: 66px;
+    font-size: 52px;
     font-family: mp-light;
-    line-height: 70px;
+    line-height: 60px;
     overflow-y: hidden;
     pointer-events: all;
 }
@@ -1904,13 +1907,13 @@ html::-webkit-scrollbar {
 
 .seven-list {
     position: fixed;
-    margin-top: 200px;
+    margin-top: 240px;
     height: 400px;
     pointer-events: all;
     text-align: center;
-    font-size: 66px;
+    font-size: 52px;
     font-family: mp-light;
-    line-height: 70px;
+    line-height: 60px;
     top: 0px;
     width: 100%;
 }
@@ -2000,6 +2003,9 @@ html::-webkit-scrollbar {
     text-align: center;
     top: 0;
     transition: .5s all;
+    opacity: 0;
+    z-index: 112;
+    pointer-events: none;
 }
 
 .summary-holder .sound span::before {
@@ -2092,30 +2098,109 @@ html::-webkit-scrollbar {
 }
 
 .page-enter-z {
-    z-index: 112 !important;
     pointer-events: all !important;
-    animation: pageenterz .5s forwards;
+    opacity: 1;
+    /* animation: pageenterz .5s forwards; */
 }
 
-@keyframes pageenterz {
+/* @keyframes pageenterz {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}
+} */
 
 .page-enter-z .summary-close {
     display: block !important;
 }
 
+
+/*...............Summary trial and footer..................*/
+
 .summary-space {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: blue;
-    opacity: 0;
+    pointer-events: all;
+    z-index: 5;
+}
+
+.summary-trial {
+    width: 100%;
+    height: 35%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary-trial-img {
+    height: 100%;
+    width: 640px;
+}
+
+.summary-trial-content {
+    width: 520px;
+    height: 100%;
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.summary-trial-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.summary-trial-title h5 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.summary-trial-title h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.summary-trial-title-after{
+    height: 1px;
+    width: 70px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+.summary-trial-text {
+    width: 100%;
+}
+
+.summary-trial-text p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.summary-trial-text p:last-of-type {
+    margin: 15px 0;
+}
+
+.summary-trial-btn {
+    cursor: pointer;
+    width: 100px;
+    height: 36px;
+}
+
+.summary-bottom {
+    width: 100%;
+    height: 65%;
+    background-color: #000000;
 }
 
 @media (max-width:800px) {

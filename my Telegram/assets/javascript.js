@@ -18,17 +18,17 @@ window.addEventListener('scroll', ()=>{
   }
   if (onetop < 0) {
       document.getElementById('mainheader').style.display = 'none';
-      document.getElementById('summaryHolder').style.opacity = '1';
+      // document.getElementById('summaryHolder').style.opacity = '1';
       document.getElementById('sixBgd').classList.add('for-six-bgd');
   } else {
       document.getElementById('mainheader').removeAttribute('style');
-      document.getElementById('summaryHolder').style.opacity = '0';
+      // document.getElementById('summaryHolder').style.opacity = '0';
       document.getElementById('sixBgd').classList.remove('for-six-bgd');
   }
   if (document.getElementById('sectionsevenTop').getBoundingClientRect().top > 0) {
     if (document.getElementById('sectionsevenTop').getBoundingClientRect().top < 650){
       document.getElementById('sixList').style.position = 'fixed';
-      document.getElementById('sixList').style.top = '150px';
+      document.getElementById('sixList').style.top = '190px';
       document.getElementById('sevenList').removeAttribute('style');
     } else {
       document.getElementById('sixList').removeAttribute('style');
