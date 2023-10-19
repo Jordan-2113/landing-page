@@ -130,9 +130,10 @@ function iphoneOurservice(){
   document.getElementById('ourserviceIphone').classList.toggle('our-service-iphone-height');
 }
 
-for(var i=0;i<10;i++){
+var headerIphone = document.getElementsByClassName('header-iphone');
+for(var i=0;i < headerIphone.length;i++){
   if(i !== 7){
-    document.getElementsByClassName('header-iphone')[i].addEventListener('click', iphoneToggle)
+    headerIphone[i].addEventListener('click', iphoneToggle)
   }
 }
 
