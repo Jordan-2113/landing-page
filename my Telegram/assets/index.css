@@ -197,6 +197,7 @@ html::-webkit-scrollbar {
     .welcome__title h1 {
         font-size: 40px;
         letter-spacing: -7px;
+        line-height: 40px;
     }
 
     .welcome__title div {
@@ -484,7 +485,7 @@ html::-webkit-scrollbar {
 
 .header-iphone {
     position: absolute;
-    top: calc(50px + 3rem);
+    top: calc(60px + 2rem);
     right: 10rem;
     width: 30px;
     height: 15px;
@@ -881,7 +882,7 @@ html::-webkit-scrollbar {
 
 @media (max-width:800px) {
     .main-title {
-        margin-top: 30vh;
+        margin-top: 20vh;
     }
 
     .main-title div {
@@ -1079,12 +1080,26 @@ html::-webkit-scrollbar {
 }
 
 .two-footer h3 {
+    width: 900px;
+    max-width: 100%;
     font-size: 66px;
     text-align: center;
     font-family: mp-light;
     line-height: 70px;
     font-weight: lighter;
-    margin: 0px;
+    margin: 0 auto;
+}
+
+.section-three .two-footer h3 {
+    width: 1400px;
+}
+
+.section-four .two-footer h3 {
+    width: 1000px;
+}
+
+.section-five .two-footer h3 {
+    width: 1200px;
 }
 
 .two-footer span {
@@ -1317,7 +1332,7 @@ html::-webkit-scrollbar {
     .two-content {
         width: 300px;
         height: 400px;
-        top: unset;
+        top: 200px;
         bottom: 30vh;
         transform: translate(-50%, 0%);
     }
@@ -1331,10 +1346,10 @@ html::-webkit-scrollbar {
     }
 
     .two-content-title h4 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: right;
         right: -20px;
-        top: -50px;
+        top: -40px;
     }
 
     .two-footer {
@@ -1344,12 +1359,14 @@ html::-webkit-scrollbar {
     .two-footer h3 {
         font-size: 30px;
         line-height: 40px;
+        padding:  0 20px;
     }
 
     .two-content-text {
         position: relative;
-        top: 20px;
-        transform: scale(35%, 50%);
+        top: 30px;
+        left: -20px;
+        transform: scale(40%, 50%);
     }
 
     .two-content-img {
@@ -2193,6 +2210,13 @@ html::-webkit-scrollbar {
     height: 100%;
     width: 640px;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.summary-trial-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .summary-trial-content {
@@ -2292,6 +2316,7 @@ html::-webkit-scrollbar {
 .summary-bottom-title h2 {
     text-align: center;
     font-size: 36px;
+    font-family: gp-lt-italic;
 }
 
 .summary-bottom-content {
@@ -2387,6 +2412,14 @@ html::-webkit-scrollbar {
         height: 40%;
     }
 
+    .summary-trial-img img {
+        position: relative;
+        top: -30%;
+        left: -10%;
+        width: 120%;
+        height: 150%;
+    }
+
     /* .summary-trial-title {
         padding: 0 40px;
     } */
@@ -2449,6 +2482,10 @@ html::-webkit-scrollbar {
     .summary-bottom-logo .welcome__title {
         position: fixed;
         transform: translateX(-50%);
+    }
+
+    .summary-bottom-logo .header-iphone{
+        position: fixed;
     }
 
     .summary-bottom-copy .summary-bottom-copy-desctop {
@@ -2610,8 +2647,8 @@ html::-webkit-scrollbar {
 .os-footer-btn {
     width: 60px;
     height: 50px;
-    position: relative;
-    bottom: 75px;
+    position: absolute;
+    bottom: 30px;
     transform: translateX(-50%);
     left: 50%;
     display: none;
@@ -3239,6 +3276,11 @@ html::-webkit-scrollbar {
         left: 200px;
     }
 
+    .trials-content-main-lists {
+        justify-content: space-around;
+    }
+    
+
     .trials-content-main-lists>div {
         margin-top: 0;
     }
@@ -3561,14 +3603,12 @@ select::-ms-expand {
     fill: #DfD6C8;
 }
 .contact-title {
-    width: 550px;
-    text-align: center;
+    width: 100%;
+    text-align: right;
     font-size: 60px;
-    position: absolute;
-    top: 150px;
-    left: 100px;
     font-family: gp-lt-italic;
     border-bottom: solid 2px #DfD6C8;
+    margin: 50px 0;
 }
 
 .contact-title h2 {
@@ -3597,12 +3637,9 @@ select::-ms-expand {
     font-size: 20px;
 }
 
-.contact-content-title>div{
-    display: flex;
-}
-
-.contact-content-title>div :first-child{
-    margin-right: 20px;
+.contact-content-title span:first-of-type {
+    display: inline-block;
+    width: 100px;
 }
 
 .contact-form {
