@@ -115,6 +115,12 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+@media screen and (max-width: 768px){
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -1341,7 +1347,7 @@ html::-webkit-scrollbar {
         font-size: 36px;
         line-height: 40px;
         left: -20px;
-        top: -50px;
+        top: -45px;
         width: 150px;
     }
 
@@ -2700,8 +2706,8 @@ html::-webkit-scrollbar {
     .os-one-content {
         margin-top: 17vh;
         width: 50%;
-        height: 42vh;
-        background-size: 100% 100%0;
+        height: 50vh;
+        background-size: 100% 100%;
     }
 
     .os-three-content {
@@ -2715,12 +2721,17 @@ html::-webkit-scrollbar {
 
     .os-footer {
         width: 100%;
-        padding: 20px;
+        padding: 20px 20px 80px;
         font-size: 14px;
         line-height: 20px;
         border-bottom-left-radius: unset;
-        top: 60vh;
+        top: 67vh;
         left: unset;
+        overflow: scroll;
+    }
+
+    .os-footer::-webkit-scrollbar {
+        display: none;
     }
 
     .os-footer span {
@@ -2927,11 +2938,13 @@ html::-webkit-scrollbar {
 
     .side-bar-content {
         width: 90%;
+        height: 80vh;
+        overflow: hidden;
     }
 
     .sbc {
         font-size: 12px;
-        padding: 15px 0px;
+        padding: 25px 0px;
     }
 
     .sbc-first {
@@ -2939,7 +2952,7 @@ html::-webkit-scrollbar {
     }
 
     .side-bar-headers {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .side-bar-header {
@@ -2948,19 +2961,26 @@ html::-webkit-scrollbar {
     }
 
     .sbc-first-title {
-        font-size: 16px;
+        font-size: 24px;
         margin-top: 24px;
-        width: 180px;
-        line-height: 20px;
+        width: 240px;
+        line-height: 24px;
     }
 
     .sbc-first-contents {
         display: block;
     }
 
+    .sbc-first-text {
+        line-height: 14px;
+    }
+
+    .sbc-items {
+        justify-content: space-between;
+    }
+
     .sbc-item {
         width: 140px;
-        height: 40px;
         line-height: 14px;
         margin: 5px;
     }
@@ -2973,7 +2993,7 @@ html::-webkit-scrollbar {
     .sbc::after {
         width: 20px;
         height: 1px;
-        top: 28px;
+        top: 35px;
         right: 30px;
     }
 
@@ -2981,12 +3001,22 @@ html::-webkit-scrollbar {
     .sbc::before {
         width: 1px;
         height: 20px;
-        top: 28.5px;
+        top: 35.5px;
         right: 29px;
     }
 
     .sbc-first::before {
         height: 0px !important;
+    }
+
+    .side-bar-close {
+        width: 20px;
+        height: 20px;
+    }
+
+    .side-bar-close div {
+        height: 1px;
+        width: 20px;
     }
 }
 
@@ -3077,7 +3107,7 @@ html::-webkit-scrollbar {
 }
 
 .trials-title h2 {
-    font-weight: lighter;
+    font-weight: 600;
     line-height: 100px;
     margin: 0;
 }
@@ -3385,9 +3415,16 @@ html::-webkit-scrollbar {
     .trials-content-register-form {
         width: 100%;
     }
+    
+    .trials-content-register-left p {
+        font-size: 12px;
+        line-height: 16px;
+    }
 
     .trials-content-register-list {
         display: block;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .trials-content-register-list>div {
@@ -3402,6 +3439,7 @@ html::-webkit-scrollbar {
 
 .trials-content-register-form {
     font-size: 14px;
+    line-height: 16px;
     margin-bottom: 130px;
 }
 
@@ -3483,11 +3521,45 @@ select::-ms-expand {
 .register-detail div {
     margin-top: 30px;
     display: flex;
+    justify-content: space-between;
 }
 
 .register-detail label {
     display: block;
     line-height: 20px;
+}
+
+
+
+.register-detail .form-detail-radio {
+    width: 14px;
+    height: 14px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    margin-top: 5px;
+    border: solid 1px #000;
+    border-radius: 50%;
+}
+
+.register-detail input[type=radio]{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    margin: 0;
+}
+  
+.register-detail input[type="radio"]:checked {
+    background-color: #000;
+}
+
+.register-detail label {
+    display: block;
+    line-height: 20px;
+    width: calc(100% - 30px);
+    margin-right: 0;
 }
 
 .submit-btn {
@@ -3560,6 +3632,10 @@ select::-ms-expand {
     .trials-content-register-form form div {
         margin-top: 30px;
     }
+    .register-detail label {
+        font-size: 10px;
+        line-height: 14px;
+    }
 }
 
 
@@ -3619,11 +3695,12 @@ select::-ms-expand {
 
 .contact-content {
     width: 1280px;
-    height: 60vh;
+    height: 65vh;
     overflow-y: scroll;
     overflow-x: hidden;
     max-width: 100%;
     margin: auto;
+    padding: 0 20px;
     margin-top: 300px;
     display: flex;
     justify-content: space-between;
@@ -3647,7 +3724,12 @@ select::-ms-expand {
     max-width: 100%;
     position: relative;
     font-size: 14px;
+    line-height: 16px;
     margin-bottom: 130px;
+}
+
+.contact-form label {
+    font-weight: 600;
 }
 
 @media (max-width:800px) {
@@ -3665,14 +3747,21 @@ select::-ms-expand {
         left: -700px;
     }
     .contact-title {
+        position: absolute;
+        top: 100px;
         left: 20px;
         font-size: 30px;
         width: 200px;
         border-bottom: none;
     }
+
+    .contact-content-title span:first-of-type {
+        width: 60px;
+    }
     .contact-content {
         display: block;
         margin-top: 250px;
+        padding: 0;
     }
     .contact-content-title h3{
         font-size: 28px;
@@ -3712,7 +3801,7 @@ label {
     background-color: unset;
     border: 0px;
     border-bottom: solid 1px #DfD6C8;
-    height: 30px;
+    height: 24px;
     color: #DfD6C8;
 }
 
@@ -3754,37 +3843,39 @@ label {
 
 .contact-detail div {
     display: flex;
+    justify-content: space-between;
+}
+
+.contact-detail .form-detail-radio {
+    width: 14px;
+    height: 14px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    margin-top: 5px;
+    border: solid 1px #DfD6C8;
+    border-radius: 50%;
 }
 
 input[type=radio]{
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     display: block;
-    margin-right: 10px;
-    border: 2px solid #0000;
-    padding: 5px;
-    outline: solid 1px #000;
+    margin: 0;
 }
   
 input[type="radio"]:checked {
-    border: 2px solid #DfD6C8;
-    background-color: blue;
+    background-color: #DfD6C8;
 }
 
 .contact-detail label {
     display: block;
     line-height: 20px;
-}
-
-.contact-detail input[type='radio'] {
-    accent-color: #ffffff;
-}
-
-.contact-detail input[type='radio']::after{
-    border-color: black;
-    background-color: #0000ff;
+    font-weight: 400;
+    width: calc(100% - 30px);
+    margin-right: 0;
 }
 
 .contact-submit {
@@ -3792,13 +3883,15 @@ input[type="radio"]:checked {
     left: 50%;
     transform: translate(-50%);
     margin: 50px 0px;
-    width: 240px;
+    width: 200px;
     height: 60px;
     border-radius: 50%;
     background-color: unset;
-    font-size: 24px;
+    font-size: 20px;
     font-family: mp-light;
     display: flex;
+    justify-content: center;
+    gap: 5px;
     align-items: center;
     border: solid 1px #DfD6C8;
     cursor: pointer;
@@ -3806,13 +3899,12 @@ input[type="radio"]:checked {
 }
 
 .contact-submit div {
-    margin-left: 30px;
     margin-top: 0 !important;
 }
 
 .contact-submit svg {
-    width: 100px;
-    height: 40px;
+    width: 60px;
+    height: 20px;
 }
 
 .contact-submit:hover svg {
@@ -3844,7 +3936,8 @@ input[type="radio"]:checked {
         width: 40%;
     }
     .contact-detail label {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 14px;
     }
     .contact-content::-webkit-scrollbar {
         display: block;
