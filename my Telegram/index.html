@@ -812,15 +812,13 @@
                 <span class="js-date" id="jsdate">17 FEBRUARY</span>, <span class="js-time" id="jstime">15:22</span>
             </div>
             <div class="summary-data js-summary-data">
-                <div class="flex">
-                    <div>
-                        <b>CURRENT WEATHER</b>
-                        <span>/30.3℃</span>
-                    </div>
-                    <div>
-                        <b> RELATIVE HUMIDITY</b>
-                        <span> /54%</span>
-                    </div>
+                <div>
+                    <b>CURRENT WEATHER</b>
+                    <span>/30.3℃</span>
+                </div>
+                <div>
+                    <b> RELATIVE HUMIDITY</b>
+                    <span> /54%</span>
                 </div>
                 <div>
                     <b>UV INDEX</b>
@@ -1112,14 +1110,14 @@
         </div>
         <div class="trials-content" id="trialContent">
             <div class="trials-content-main">
-                <div class="trials-content-main-title">
+                <a href="#registerNow" class="trials-content-main-title">
                     <h3>REGISTER NOW</h3>
                     <svg viewBox="0,0,110,40">
                         <path d="M 100 20 q -18 -2 -20 -20" stroke-width="2" fill="none" />
                         <path d="M 102 20 l -100 0" stroke-width="2" fill="none" />
                         <path d="M 100 20 q -18 2 -20 20" stroke-width="2" fill="none" />
                     </svg>
-                </div>
+                </a>
                 <div class="trials-content-main-lists">
                     <div>
                         <div>
@@ -1231,20 +1229,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="trials-content-register-form">
+                <div class="trials-content-register-form" id="registerNow">
                     <form action="submit">
                         <div class="register-name">
                             <div>
                                 <label for="name-register">NAME*</label>
                                 <input type="text" name="name-register" id="name-register">
                             </div>
-                            <div>
+                            <div class="myselect">
                                 <label for="gender-register">GENDER*</label>
-                                <select name="gender" id="gender-register">
-                                    <option value=""></option>
-                                    <option value="male"> male </option>
-                                    <option value="female"> female </option>
-                                </select>
+                                <input name="gender" class="select" id="gender-register">
+                                <div class="myselect-value">
+                                    <div class="select-value" onmousedown="genderinput(0)"></div>
+                                    <div class="select-value" onmousedown="genderinput(1)">male</div>
+                                    <div class="select-value" onmousedown="genderinput(2)">female</div>
+                                </div>
                             </div>
                         </div>
                         <div class="register-phone">

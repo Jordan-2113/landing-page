@@ -282,3 +282,17 @@ function contactToggle() {
   osSectionToponly();
   document.getElementById('contact').classList.toggle('top-0');
 }
+
+
+//for select style customization
+
+var gender = document.getElementsByClassName('select-value');
+genderinput(0)
+function genderinput(b) {
+  let gendervalue = gender[b].innerHTML;
+  document.getElementById('gender-register').value = gendervalue;
+  for(let i = 0;i<3;i++){
+    gender[i].classList.remove('checked-value')
+  }
+  gender[b].classList.add('checked-value');
+}
