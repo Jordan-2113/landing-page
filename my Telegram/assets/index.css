@@ -93,7 +93,7 @@ img {
     transition: .5s all;
     width: 100%;
     height: 100%;
-    filter: blur(100px);
+    /* filter: blur(100px); */
 }
 
 body,
@@ -988,7 +988,7 @@ html::-webkit-scrollbar {
 }
 
 .two-content-img {
-    /* background-image: url("./image/BeautyGirl02.jpg"); */
+    background-image: url("./image/BeautyGirl02.jpg");
     background-repeat: no-repeat;
     background-size: 150% 110%;
     background-position: right top;
@@ -1405,7 +1405,7 @@ html::-webkit-scrollbar {
 }
 
 .three-content-img {
-    /* background-image: url("./image/Body01.jpg"); */
+    background-image: url("./image/Body01.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -1501,7 +1501,7 @@ html::-webkit-scrollbar {
 }
 
 .four-content-img {
-    /* background-image: url("./image/Body03.jpg"); */
+    background-image: url("./image/Body03.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -1599,7 +1599,7 @@ html::-webkit-scrollbar {
 }
 
 .five-content-img {
-    /* background-image: url("./image/BeautyGirl09.jpg"); */
+    background-image: url("./image/BeautyGirl09.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -2044,8 +2044,16 @@ html::-webkit-scrollbar {
 }
 
 .summary-data {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 600px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
     font-size: 24px;
     margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .summary-data span {
@@ -3146,6 +3154,7 @@ html::-webkit-scrollbar {
     margin: auto;
     height: 63vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     padding: 0px 50px;
 }
 
@@ -3200,6 +3209,8 @@ html::-webkit-scrollbar {
 }
 
 .trials-content-main-title {
+    color: #000;
+    text-decoration: none;
     margin-top: 20px;
     font-size: 32px;
     position: relative;
@@ -3213,22 +3224,24 @@ html::-webkit-scrollbar {
 
 .trials-content-main-title:hover svg {
     animation: trialscmt .3s infinite alternate;
+    width: 100px;
 }
 
 @keyframes trialscmt {
     from {
-        left: 300px;
+        left: 0px;
     }
 
     to {
-        left: 310px;
+        left: 10px;
     }
 }
 
 .trials-content-main-title>svg {
-    width: 160px;
+    width: 100px;
     height: 60px;
     stroke: black;
+    position: relative;
 }
 
 .trials-content-main-lists h5 {
@@ -3463,6 +3476,7 @@ label {
 .register-date-time input {
     background-color: unset;
     border: 0px;
+    padding: 5px;
     border-bottom: solid 1px black;
 }
 
@@ -3475,23 +3489,76 @@ label {
 }
 
 .register-select select:focus,
-.register-name select:focus,
+.register-name .select:focus,
 .register-name input:focus,
 .register-phone input:focus,
 .register-date-time input:focus {
-    outline: none;
+    outline: solid 1px #4444dd;
 }
 
-.register-name select,
+.register-name .select,
 .register-select select {
     background-color: unset;
     border: 0px;
+    padding: 5px;
     border-bottom: solid 1px black;
 }
 
-.register-name select {
+.myselect .select {
     width: 150px;
 }
+
+.myselect {
+    position: relative;
+}
+
+.myselect::after {
+    content: "v";
+    pointer-events: none;
+    position: absolute;
+    font-weight: 900;
+    right: 5px;
+    top: 5px;
+}
+
+.myselect-value {
+    display: none;
+    width: 150px;
+    padding: 5px;
+    right: 0;
+    top: 0px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #524031;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.myselect .select:focus + .myselect-value {
+    display: block;
+}
+
+.myselect-value div {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding: 5px 30px;
+    font-size: 20px;
+}
+
+.myselect-value div:hover {
+    background-color: #5555ff;
+    border-radius: 5px;
+}
+
+.myselect-value .checked-value::before {
+    content: "✔";
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+/*  */
 
 select::-ms-expand {
     display: none;
@@ -3567,7 +3634,7 @@ select::-ms-expand {
     left: 50%;
     transform: translate(-50%);
     margin: 50px 0px;
-    width: 240px;
+    width: 200px;
     height: 60px;
     border-radius: 50%;
     background-color: unset;
@@ -3621,7 +3688,7 @@ select::-ms-expand {
     .register-phone input,
     .register-date-time input,
     .register-select select,
-    .register-name select {
+    .myselect .select {
         width: 50%;
     }
 
@@ -3635,6 +3702,12 @@ select::-ms-expand {
     .register-detail label {
         font-size: 10px;
         line-height: 14px;
+    }
+    .myselect-value {
+        width: 50%;
+    }
+    .myselect-value div {
+        margin-top: 0 !important;
     }
 }
 
