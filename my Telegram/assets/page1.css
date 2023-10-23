@@ -331,6 +331,7 @@ html::-webkit-scrollbar {
     top: 14px !important;
     bottom: 14px !important
 }
+
 .loading {
     width: 100%;
     position: absolute;
@@ -427,7 +428,7 @@ html::-webkit-scrollbar {
     transition: .5s all;
 }
 
-.header .welcome__title{
+.header .welcome__title {
     color: white;
 }
 
@@ -492,7 +493,7 @@ html::-webkit-scrollbar {
     color: #666666;
 }
 
-.our-service span::after{
+.our-service span::after {
     background-color: #666666;
     border-color: #666666;
 }
@@ -504,7 +505,7 @@ html::-webkit-scrollbar {
     position: relative;
 }
 
-.big-services div{
+.big-services div {
     text-align: center;
     font-size: 100px;
     font-family: gp-lt-italic;
@@ -516,7 +517,7 @@ html::-webkit-scrollbar {
     left: -300px;
 }
 
-.footer{
+.footer {
     position: absolute;
     width: 40%;
     bottom: 2%;
@@ -525,7 +526,7 @@ html::-webkit-scrollbar {
     font-family: mp-light;
 }
 
-.footer p{
+.footer p {
     font-family: mp, sans-serif;
     margin: 0;
 }
@@ -567,7 +568,7 @@ html::-webkit-scrollbar {
     margin-bottom: 60px;
 }
 
-.sbc{
+.sbc {
     position: relative;
     padding: 30px 0px 30px;
     font-size: 14px;
@@ -685,7 +686,7 @@ html::-webkit-scrollbar {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 .right-slider {
@@ -698,6 +699,6 @@ html::-webkit-scrollbar {
 .left-slider {
     width: 25%;
     height: 100%;
-    cursor:url(./arr-left-black.svg), pointer;
+    cursor: url(./arr-left-black.svg), pointer;
     opacity: 0;
 }
